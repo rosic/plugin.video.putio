@@ -56,6 +56,9 @@ def populateDir(pluginUrl, pluginId, listing):
             'sorttitle': item.name
         })
 
+        if re.match('video', item.content_type) and item.first_accessed_at is not None:
+            listItem.setInfo('video', {'Title': item.name, 'playcount': 1})
+
         xp.addDirectoryItem(
             pluginId,
             url,
