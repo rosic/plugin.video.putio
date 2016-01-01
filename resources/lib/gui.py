@@ -89,4 +89,4 @@ def play(item, subtitle=None):
 
     if subtitle:
         print "Adding subtitle to player!"
-        player.setSubtitles(subtitle)
+        player.setSubtitles([subtitle])
